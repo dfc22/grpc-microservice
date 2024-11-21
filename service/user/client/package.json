@@ -1,0 +1,9 @@
+{
+  "name": "user-service-client",
+  "volta": {
+    "extends": "../package.json"
+  },
+  "scripts": {
+    "build": "npx tsc -p tsconfig.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "task-service-client",
+  "volta": {
+    "extends": "../package.json"
+  },
+  "scripts": {
+    "build": "npx tsc -p tsconfig.json"
+  }
+}

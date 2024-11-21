@@ -1,0 +1,20 @@
+version: v2
+clean: true
+managed:
+  enabled: true
+plugins:
+  - local: protoc-gen-es
+    out: client/gen
+    opt: [target=ts, import_extension=none]
+  - local: protoc-gen-es
+    out: server/gen
+    opt: [target=ts, import_extension=none]
+inputs:
+  - directory: ../../proto
+    paths:
+      - ../../proto/user
+  - module: buf.build/googleapis/googleapis
+    paths:
+      - google/api/annotations.proto
+      - google/api/field_behavior.proto
+      - google/api/http.proto

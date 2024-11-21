@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package task.service.task.v1;
+
+import "google/api/field_behavior.proto";
+
+import "task/type/task.proto";
+
+message ListTasksRequest {
+  string parent = 1 [(google.api.field_behavior) = REQUIRED];
+  int32 page_size = 2;
+  string page_token = 3;
+}
+
+message ListTasksResponse {
+  repeated type.Task tasks = 1;
+  string next_page_token = 2;
+  int32 total_size = 3;
+}

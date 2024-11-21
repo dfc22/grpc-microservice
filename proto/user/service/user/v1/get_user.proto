@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package user.service.user.v1;
+
+import "google/api/field_behavior.proto";
+
+message GetUserRequest {
+  string name = 1 [(google.api.field_behavior) = REQUIRED];
+}

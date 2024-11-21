@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package task.service.task.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+import "task/type/task.proto";
+
+import "task/service/task/v1/list_tasks.proto";
+import "task/service/task/v1/create_task.proto";
+import "task/service/task/v1/delete_task.proto";
+
+service TaskService {
+  rpc ListTasks(ListTasksRequest) returns (ListTasksResponse) {
+    option (google.api.http) = {
+      get: "/v1/task"
+    };
+  }
+
+  rpc CreateTask(CreateTaskRequest) returns (type.Task) {
+    option (google.api.http) = {
+      post: "/v1/task"
+      body: "task"
+    };
+  }
+
+  rpc DeleteTask(DeleteTaskRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/v1/{task/*}"
+    };
+  }
+}

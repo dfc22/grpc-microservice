@@ -1,0 +1,11 @@
+{
+  "name": "task-service",
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "buf:gen": "npx buf generate --template buf.gen.yaml && yarn check:fix",
+    "check:fix": "npx biome check . --fix"
+  }
+}

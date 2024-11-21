@@ -1,0 +1,23 @@
+{
+  "name": "grpc-microservice",
+  "workspaces": ["service/*"],
+  "scripts": {
+    "buf:update": "npx buf dep update proto",
+    "buf:lint": "npx buf lint proto"
+  },
+  "packageManager": "yarn@4.5.1",
+  "volta": {
+    "node": "22.11.0",
+    "yarn": "4.5.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@bufbuild/buf": "^1.47.2",
+    "@bufbuild/protoc-gen-es": "^2.2.2",
+    "@types/node": "^22.9.1",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

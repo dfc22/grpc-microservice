@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package task.type;
+
+import "google/protobuf/timestamp.proto";
+import "google/api/field_behavior.proto";
+
+import "user/type/user.proto";
+
+message Task {
+  string name = 1;
+  string display_name = 2;
+  string assignee_name = 3;
+  user.type.User assignee = 4
+      [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp due = 5;
+}

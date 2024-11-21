@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package user.service.user.v1;
+
+import "google/api/annotations.proto";
+
+import "user/type/user.proto";
+
+import "user/service/user/v1/get_user.proto";
+
+service UserService {
+  rpc GetUser(GetUserRequest) returns (type.User) {
+    option (google.api.http) = {
+      get: "/v1/{user/*}"
+    };
+  }
+}

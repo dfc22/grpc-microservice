@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package task.service.task.v1;
+
+import "google/api/field_behavior.proto";
+
+import "task/type/task.proto";
+
+message CreateTaskRequest {
+  string parent = 1 [(google.api.field_behavior) = REQUIRED];
+  type.Task task = 2 [(google.api.field_behavior) = REQUIRED];
+}

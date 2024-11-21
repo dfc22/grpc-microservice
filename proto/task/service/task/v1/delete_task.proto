@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package task.service.task.v1;
+
+import "google/api/field_behavior.proto";
+
+message DeleteTaskRequest {
+  string name = 1 [(google.api.field_behavior) = REQUIRED];
+}

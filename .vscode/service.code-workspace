@@ -1,0 +1,78 @@
+{
+  "folders": [
+    {
+      "path": "../service/user",
+      "name": "service/user"
+    },
+    {
+      "path": "../service/task",
+      "name": "service/task"
+    },
+    {
+      "path": "../proto",
+      "name": "proto"
+    },
+    {
+      "path": "..",
+      "name": "root"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "biomejs.biome",
+      "xaver.clang-format",
+      "vitest.explorer",
+      "openfga.openfga-vscode",
+      "zxh404.vscode-proto3"
+    ]
+  },
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "biomejs.biome",
+      "typescript.preferences.importModuleSpecifier": "non-relative"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[proto3]": {
+      "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "clang-format.language.proto.style": "{ IndentWidth: 2, BasedOnStyle: Google }",
+    "jestrunner.disableCodeLens": true,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+      "*.ts": "${capture}.*.ts",
+      "*.type.ts": "${capture}.*.ts"
+    },
+    "clang-format.style": "google",
+    "cSpell.words": [],
+    "cSpell.ignorePaths": [
+      "**/node_modules",
+      "**/yarn.lock",
+      ".vscode",
+      "**/gen"
+    ]
+  }
+}

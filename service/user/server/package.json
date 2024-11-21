@@ -1,0 +1,13 @@
+{
+  "name": "user-service-server",
+  "volta": {
+    "extends": "../package.json"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.2.2",
+    "@connectrpc/connect": "^2.0.0",
+    "@connectrpc/connect-fastify": "^2.0.0",
+    "@connectrpc/connect-node": "^2.0.0",
+    "fastify": "^5.1.0"
+  }
+}
